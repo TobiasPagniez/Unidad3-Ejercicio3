@@ -1,0 +1,25 @@
+info:
+  name: Crear Producto
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/productos
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "remera DE ALGODÓN",
+        "codigo": "23",
+        "descripcion": "algodon",
+        "precio": 250,
+        "stock": 3
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
